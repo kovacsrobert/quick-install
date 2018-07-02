@@ -31,3 +31,4 @@ ssh-add ~/.ssh/id_rsa
 
 # Install docker
 curl -sSL https://get.docker.com | sh
+usermod -aG docker pi
