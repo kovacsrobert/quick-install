@@ -21,6 +21,13 @@ apt-get install -y unzip wget git vim ufw google-chrome-stable maven dkms build-
 git config --global push.default simple
 git config --global user.name "Robert Kovacs"
 git config --global user.email robert.kovacs.centacc@gmail.com
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
 
 # Github-ssh-key
 mkdir ~/.ssh
@@ -48,3 +55,41 @@ cp ./tomcat.service /etc/systemd/system/
 systemctl daemon-reload
 systemctl start tomcat
 systemctl enable tomcat
+
+# STS
+wget --directory-prefix=/tmp/ http://download.springsource.com/release/STS/3.9.5.RELEASE/dist/e4.8/spring-tool-suite-3.9.5.RELEASE-e4.8.0-linux-gtk-x86_64.tar.gz
+tar -xvf /tmp/spring-tool-suite-3.9.5.RELEASE-e4.8.0-linux-gtk-x86_64.tar.gz
+mv /tmp/sts /opt/
+
+# Add alias-es to .bashrc
+printf '\n' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'PATH="$PATH:/opt/sublime_text"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'PATH="$PATH:/opt/sts/sts-bundle/sts-3.9.5.RELEASE"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'DOCKER_HOST="https://hub.docker.com/"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gs="git status "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias ga="git add "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gb="git branch "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gc="git commit"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gd="git diff"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias go="git checkout "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gk="gitk --all&"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias gx="gitx --all"' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias got="git "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf 'alias get="git "' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
+printf '\n' >> ~/.bashrc
