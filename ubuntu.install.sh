@@ -2,7 +2,9 @@
 
 # Keys
 wget -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
 # Repos
 add-apt-repository -y ppa:webupd8team/java
@@ -15,7 +17,11 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selec
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
 # Package-install
-apt-get install -y unzip wget git vim ufw google-chrome-stable maven dkms build-essential unity-tweak-tool virtualbox oracle-java8-jdk oracle-java8-installer oracle-java8-set-default
+apt-get install -y unzip wget git vim ufw google-chrome-stable maven apt-transport-https sublime-text virtualbox oracle-java8-jdk oracle-java8-installer oracle-java8-set-default
+
+# Nautilus
+gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+gsettings set org.gnome.nautilus.list-view default-zoom-level 'small'
 
 # Git-config
 git config --global push.default simple
