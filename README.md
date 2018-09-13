@@ -1,2 +1,2 @@
 # quick-install
-Debian linux setup script
+Short setup scripts
