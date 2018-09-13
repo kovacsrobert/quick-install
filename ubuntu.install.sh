@@ -17,7 +17,7 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selec
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
 # Package-install
-apt-get install -y unzip wget git vim ufw google-chrome-stable maven apt-transport-https sublime-text virtualbox oracle-java8-jdk oracle-java8-installer oracle-java8-set-default
+apt-get install -y mc unzip wget git vim ufw google-chrome-stable maven apt-transport-https sublime-text virtualbox oracle-java8-jdk oracle-java8-installer oracle-java8-set-default
 
 # Nautilus
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
