@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y mc unzip wget virtualbox
+apt-get install -y mc unzip wget p7zip-full p7zip-rar virtualbox
 
 bash ./chrome.install.sh
 bash ./git.install.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y mc unzip wget
+apt-get install -y mc unzip wget p7zip-full p7zip-rar
 
 bash ./docker.install.sh
 bash ./git.install.sh
