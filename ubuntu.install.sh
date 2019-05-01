@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install -y mc unzip wget p7zip-full p7zip-rar virtualbox
+apt-get install -y mc unzip wget p7zip-full p7zip-rar virtualbox dconf-editor
 
 bash ./chrome.install.sh
 bash ./git.install.sh
@@ -12,8 +12,9 @@ bash ./uwf.install.sh
 
 gsettings set org.gnome.nautilus.preferences default-folder-viewer "list-view"
 gsettings set org.gnome.nautilus.list-view default-zoom-level "small"
-# gsettings set org.gnome.nautilus.preferences show-hidden-files true
-# gsettings set org.gnome.nautilus.list-view default-visible-columns ['name', 'type', 'size', 'date_modified']
+gsettings set org.gnome.nautilus.preferences show-hidden-files true
+gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'type', 'date_modified']"
+gsettings set org.gnome.nautilus.preferences default-sort-order 'type'
 
 # remove shortcuts for IDEA navigation
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
