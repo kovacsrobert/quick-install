@@ -3,6 +3,9 @@ alias gs="git status"
 alias gl="git log --decorate"
 alias ga="git add"
 alias gc="git commit"
+alias gf="git fetch"
+alias gp="git push"
+alias gm="git merge"
 
 # docker aliases
 alias d="docker"
